@@ -1,0 +1,21 @@
+export const msalConfig = {
+    auth: {
+        clientId: "8e9ad887-fcb6-4d33-9544-0657e51590e3",
+        authority: "https://login.microsoftonline.com/7ecd33b8-57e2-4e0b-ace8-8c8fd532708f",
+        redirectUri: "http://localhost:5173",
+        postLogoutRedirectUri: "http://localhost:5173/"
+    },
+    cache: {
+        cacheLocation: "sessionStorage",
+        storeAuthStateInCookie: false,
+    }
+};
+
+export const loginRequest = {
+    scopes: ["User.Read", "api://8e9ad887-fcb6-4d33-9544-0657e51590e3/bff.read"]
+};
+
+// frontend-rutaexpress/src/auth/authConfig.js
+export const bffTokenRequest = {
+    scopes: ["api://8e9ad887-fcb6-4d33-9544-0657e51590e3/bff.read"]
+};
